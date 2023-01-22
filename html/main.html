@@ -18,10 +18,14 @@
                     id="search" />
             </div>
             <div class="button-div">
+                <button class="btn" id="previous-button">Previous</button>
                 <button class="btn" id="next-button">Next</button>
             </div>
         </div>
-        <div class="resume">
+        <div class="error" id="error">
+            <h1>No Results Found!</h1>
+        </div>
+        <div class="resume" id="resume">
             <div class="resume-header">
                 <div class="resume-header-name">
                     <h1 class="resume-header-name-h1" id="resume-name"></h1>
@@ -30,7 +34,7 @@
                     </div>
                 </div>
                 <div class="resume-header-logo">
-                    <img src="" alt="" class="resume-header-logo-img" />
+                    <img src="" alt="" class="resume-header-logo-img" id="img" />
                 </div>
             </div>
             <div class="resume-main">
@@ -60,27 +64,27 @@
                         <div class="company-details">
                             <div class="company-name-div">
                                 <p class="company-name-header" id="company-name-p">
-                                    <span id="company-name-span">Company Name:</span>
+                                    <span class="company-name-span" id="company-name-span">Company Name: </span>
                                 </p>
                             </div>
                             <div class="position-div">
                                 <p class="position-header" id="position-p">
-                                    <span id="position-span">Position: </span>
+                                    <span class="position-span" id="position-span">Position: </span>
                                 </p>
                             </div>
                             <div class="start-date-div">
                                 <p class="start-date-header" id="start-date-p">
-                                    <span id="start-date-span">Start Date:</span>
+                                    <span class="start-date-span" id="start-date-span">Start Date:</span>
                                 </p>
                             </div>
                             <div class="end-date-div">
                                 <p class="end-date-header" id="end-date-p">
-                                    <span id="end-date-span">End Date:</span>
+                                    <span class="end-date-span" id="end-date-span">End Date:</span>
                                 </p>
                             </div>
                             <div class="summary-div">
                                 <p class="summary-header" id="summary-p">
-                                    <span id="summary-span">Summary:</span>
+                                    <span class="summary-span" id="summary-span">Summary:</span>
                                 </p>
                             </div>
                         </div>
@@ -88,8 +92,9 @@
                     <div class="projects" id="projects-div">
                         <h2>Projects</h2>
                         <div class="project-details">
-                            <p class="project-name" id="project-name"></p>
-                            <p class="project-desc" id="project-desc"></p>
+                            <p class="project-p" id="project-p">
+                                <span id="project-span"></span>
+                            </p>
                         </div>
                     </div>
                     <div class="education" id="education-div">
@@ -97,16 +102,19 @@
                         <div class="education-details">
                             <ul class="education-details-ul">
                                 <li class="ug-details">
-                                    <p class="ug-heading">UG: </p>
-                                    <p class="ug-p" id="ug-p"></p>
+                                    <p class="ug-heading" id="ug-p">
+                                        <span class="education-span">UG:</span>
+                                    </p>
                                 </li>
                                 <li class="pu-details">
-                                    <p class="pu-heading">PU: </p>
-                                    <p class="pu-p" id="pu-p"></p>    
+                                    <p class="pu-heading" id="pu-p">
+                                        <span class="education-span">PU:</span>
+                                    </p>    
                                 </li>
                                 <li class="high-school-details">
-                                    <p class="high-school-heading">UG: </p>
-                                    <p class="high-school-p" id="high-school-p"></p>
+                                    <p class="hs-heading" id="hs-p">
+                                        <span class="education-span">High School:</span>
+                                    </p>
                                 </li>
                             </ul>
                         </div>
@@ -116,31 +124,38 @@
                         <div class="internship-details-div">
                             <ul class="internship-details-ul">
                                 <li class="company-name-li">
-                                    <p class="company-name-header">Company Name : </p>
-                                    <p class="company-name-p" id="company-name-p"></p>
+                                    <p class="company-name-header" id="int-company-name-p">
+                                        <span class="company-name-span" id="int-company-name-span">Company Name:</span>
+                                    </p>
                                 </li>
                                 <li class="position-li">
-                                    <p class="position-header">Position : </p>
-                                    <p class="position-p" id="position-p"></p>    
+                                    <p class="position-header" id="int-position-p">
+                                        <span class="position-span" id="int-position-span">Position:</span>
+                                    </p>    
                                 </li>
                                 <li class="start-date-li">
-                                    <p class="start-date-header">Start Date : </p>
-                                    <p class="start-date-p" id="start-date-p"></p>
+                                    <p class="start-date-header" id="int-start-date-p">
+                                        <span class="start-date-span" id="int-start-date-span">Start Date:</span>
+                                    </p>
                                 </li>
                                 <li class="end-date-li">
-                                    <p class="end-date-header">End Date : </p>
-                                    <p class="end-date-p" id="end-date-p"></p>
+                                    <p class="end-date-header" id="int-end-date-p">
+                                        <span class="end-date-span" id="int-end-date-span">End Date:</span>
+                                    </p>
                                 </li>
                                 <li class="summary-li">
-                                    <p class="summary-header">Summary : </p>
-                                    <p class="summary-p" id="summary-p"></p>    
+                                    <p class="summary-header" id="int-summary-p">
+                                        <span class="summary-span" id="int-summary-span">Summary:</span>
+                                    </p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="achievements">
                         <h2>Achievements</h2>
-                        <div class="achievements-div" id="achievements-div"></div>
+                        <div class="achievements-div" id="achievements-div">
+                            <ul class="achievements-ul" id="achievements-ul"></ul>
+                        </div>
                     </div>
                 </div>
             </div>
