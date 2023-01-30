@@ -183,7 +183,11 @@ search.addEventListener("input", (e) => {
   let searchedValue = e.target.value;
   resumeData = [];
   for (const resume of data.resume) {
-    if (resume.basics.AppliedFor.toLowerCase() === searchedValue.toLowerCase())
+    if (
+      resume.basics.AppliedFor.toLowerCase().includes(
+        searchedValue.toLowerCase()
+      )
+    )
       resumeData.push(resume);
   }
   currentIndex = 0;

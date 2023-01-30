@@ -95,3 +95,41 @@ body {
 .education-span {
     font-weight: 600;
 }
+
+.search {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    border: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    border: transparent;
+    background-color: ghostwhite;
+    border-radius: 0.4rem;
+    transition: 0.3s ease;
+    width: 15rem;
+}
+
+.search:hover {
+    transition: 0.3s ease;
+    background-color: antiquewhite;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.btn {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0.4rem;
+    transition: 0.3s ease;
+    font-weight: 600;
+    border: transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: antiquewhite;
+    transition: 0.3s ease;
+}
